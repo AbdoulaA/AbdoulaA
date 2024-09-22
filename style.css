@@ -1,0 +1,16 @@
+.about {
+    color: #b20909;
+}
+
+.skills {
+    font-size: 24px;
+    color: #12626d;
+}
+
+.projects {
+    background: linear-gradient(to right, #ff0000, #00ff00);
+}
+
+.contact {
+    font-family: 'Comic Sans MS', cursive;
+}
