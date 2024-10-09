@@ -1,16 +1,28 @@
 .about {
-    color: #b20909;
+  color: #b20909;
 }
 
 .skills {
-    font-size: 24px;
-    color: #12626d;
+  font-size: 24px;
+  color: #12626d;
 }
 
 .projects {
-    background: linear-gradient(to right, #ff0000, #00ff00);
+  background: linear-gradient(to right, #ff0000, #00ff00);
 }
 
 .contact {
-    font-family: 'Comic Sans MS', cursive;
+  font-family: "Comic Sans MS", cursive;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+} /* condensed to save space */
+.project {
+  width: 30%;
+  margin: 10px;
+  padding: 20px 10px;
+  background: lightblue; /* pick a color */
+  border-radius: 25%;
 }
