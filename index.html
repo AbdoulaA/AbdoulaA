@@ -1,56 +1,350 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>CSCE 190: Abdorruhman Abdelwahed</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdorruhman Abdelwahed</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/adv-portfolio favicon.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f419ce33b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("vjPbQBxuwuYwq5kLv");
+   })();
+</script>
   </head>
-  <body>
-    <h1>Abdorruhman Abdelwahed</h1>
-    <div class="about"><h2>About me</h2></div>
-    <div class="skills"><h2>Skills</h2></div>
-    <div class="projects">
-      <h2>Highlighted projects</h2>
-      <!-- Problem Statement Assignment -->
-      <section class="project">
-        <!-- <a href="files/statement.pdf"><h3>Problem Statement</h3></a>
-        <a href="files/statement.pdf"
-          ><img src="images/problem.png" style="height: 100px"
-        /></a>
-        <p>
-          Entrepreneurs who own businesses in niche locations (airports,
-          amusement parks, schools, museums, etc.) need an easy way to track
-          their performance.
+  <script src="app.js"></script>
+  <body id="body">
+    <nav>
+      <div class="logos">
+        <a href="#" class="logo__anchor" onclick="toggleArabic(); toggleEnglish()">
+          <h1 class="full-name">Abdorruhman<br />Abdelwahed</h1>
+          <img
+            src="./assets/adv-portfolio logo.png"
+            alt=""
+            class="personal-logo"
+          />
+        </a>
+
+        <img
+          src="./assets/adv-portfolio logo purple.png"
+          alt=""
+          class="personal-logo__purple"
+        />
+        <span class="logo__function">Click me!</p>
+
+      </div>
+      <ul class="nav__link--list">
+        <li class="nav__link nav__modal">
+          <a
+            href="#"
+            class="link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModalOn()"
+            >About</a
+          >
+        </li>
+        <li class="nav__link">
+          <a
+            href="#projects"
+            class="link--anchor link__hover-effect link__hover-effect--black"
+            >Projects</a
+          >
+        </li>
+        <li class="nav__link nav__modal">
+          <a
+            href="#"
+            class="link--anchor link__hover-effect link__hover-effect--black" onclick="toggleModalOn()"
+            >Contact</a
+          >
+        </li>
+        <li class="nav__link">
+          <a href="#"><i class="fa-solid fa-circle-half-stroke" onclick="toggleTheme()"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <section id="landing-page">
+      <button class="email__button click" onclick="toggleModalOn()">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <header>
+        <h1 class="title">
+          Hi! I'm<br /><span class="english secondary" id="english__secondary">Abdorruhman</span>
+          <span class="arabic secondary" id="arabic__secondary">عبدالرحمن</span>
+        </h1>
+        <p class="header__para">
+          I'm a <span class="secondary">front-end software engineer</span> born
+          in New York and raised in Egypt. After graduating high school at 16,
+          I'm preparing to better the world with beautiful user experience
+          designs and responsive code,<br />
+          <span class="secondary">just like with this website!</span>            <span class="secondary link__hover-effect--header">
+              <!-- <a href="#" onclick="toggleModalOn()"> about me.</a> -->
+            </span>
         </p>
-        <a href="files/Affinity_DOC.pdf"><h3>Affinity Diagram</h3></a>
-        <a href="files/Affinity_DOC.pdf"
-          ><img src="images/Affinity_IMG.png" style="height: 600px"
-        /></a>
-        <p>
-          The diagram organizes project considerations into five key categories:
-          UI/UX, Communications, Storage, Code, and Marketing. Each category
-          highlights specific tasks or questions that need addressing. For
-          UI/UX, the focus is on design elements like color themes, business
-          grouping, and viewing methods. Communications examines how to manage
-          updates, send notifications, and address issues. Storage emphasizes
-          virtual storage needs and cost considerations. The Code section
-          includes decisions around JavaScript libraries, development
-          environments, and IDEs. Marketing discusses logo creation, advertising
-          strategies, and managing social media accounts. Overall, the diagram
-          provides a structured overview of essential project components across
-          various domains.
-        </p> -->
+        <div class="social__links">
+          <a
+            href="https://www.linkedin.com/in/abdorruhman-abdelwahed-472769250/"
+            target="_blank"
+            class="link__anchor"
+            ><i class="fa-brands fa-linkedin social__link--linkedin click"></i
+          ></a>
+          <a
+            href="https://github.com/AbdoulaA"
+            target="_blank"
+            class="link__anchor"
+            ><i class="fa-brands fa-github social__link click"></i
+          ></a>
+          <a href="./assets/Resume.pdf" target="_blank" class="link__anchor"
+            ><i class="fa-solid fa-file social__link click"></i
+          ></a>
+        </div>
+        
+        <img src="./assets/pfp.png" alt="" class="pfp">
+        
+        
 
-        <a href="files/Sketches_DOC.pdf"><h3>Affinity Diagram</h3></a>
-        <a href="files/Sketches_DOC.pdf"
-          ><img src="images/Sketches_IMG.png"
-        /></a>
+        <a href="#projects" class="scroll"
+          ><div class="scroll__icon click"></div
+        ></a>
+      </header>
+    </section>
+    <div class="modal">
+      <div class="modal__half modal__about">
 
-        <p>
-          The mobile app design concept for entrepreneurs includes a Business Owner's Overview screen displaying a list of stores with performance metrics, and each listed by name along with its specific airport or theme park location. The Job Application screen offers a straightforward form for prospective employees to apply to various restaurant locations and upload resumes, while the Store Sales Performance screen provides detailed sales statistics and performance analytics for individual stores, all featuring highlights to maintain a cohesive and vibrant visual identity across the app.
-
+        <h2 class="modal__about--title">A bit about me.</h2>
+        <p class="modal__about--description">
+          I'm a <span class="secondary">front-end software engineer</span> born
+          in New York and raised in Egypt. After graduating high school at 16,
+          I'm preparing to better the world with beautiful user experience
+          designs and responsive code,<br />
+          <span class="secondary">just like with this website!</span>
         </p>
-      </section>
+        <div class="modal__about--pron">
+          <h2 class="modal__about--pron--title">How do you say my name?</h2>
+          <p class="modal__about--pron--subtitle">
+            ab•dor•rah•man <br />ab•del•wah•hed
+          </p>
+        </div>
+        <div class="language__list">
+          <div class="language">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                alt=""
+                class="language__img"
+              />
+
+            <span class="language__name">HTML</span>
+          </div>
+          <div class="language">
+
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+                alt=""
+                class="language__img"
+              />
+
+            <span class="language__name">CSS</span>
+          </div>
+          <div class="language">
+
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+                alt=""
+                class="language__img"
+              />
+
+            <span class="language__name">JavaScript</span>
+          </div>
+          <div class="language">
+
+              <img
+                src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+                alt=""
+                class="language__img"
+              />
+
+            <span class="language__name">React</span>
+          </div>
+        </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <div><i class="fa-solid fa-times click" onclick="toggleModalOn(); normalAtClose()"></i></div>
+
+            <div class="modal__overlay modal__overlay--loading">
+                <i class="fa-solid fa-spinner"></i>
+            </div>
+            <div class="modal__overlay modal__overlay--success">
+                Thank you for the email! Looking forward to our conversation.
+            </div>
+          <h2 class="modal__contact--title hide"><span class="arrow">></span> Let's Talk!</h2>
+          <div class="hover__opacity hide">
+            <h3 class="modal__contact--subtitle">I'd love to hear from you.</h3>
+          <form id="contact__form" autocomplete="off" onsubmit="contact(event)">
+            <div class="form__item">
+                <label class="form__item--label">Name</label>
+                <input type="text" class="input" name="user_name" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label">Email</label>
+                <input type="email" role="presentation" class="input" name="user_email" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label">Message</label>
+                <textarea class="input" name="user_message" rows="8" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit click" type="submit" value="Submit">Send Email</button>
+          </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contact"><h2>Contact me</h2></div>
+    <!-- <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="secondary">projects</span>
+          </h1>
+          <ul class="project__list">
+            
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/m2 project .png"
+                  alt=""
+                  class="project__wrapper--img"
+                />
+                <div class="project__description">
+                  <h1 class="project__description--title">
+                    M2 Concepts™
+                  </h1>
+                  <h2 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h2>
+                  <p class="project__description--para">
+                    M2 Concepts, LLC is a privately held, minority owned food, beverage, and retailing company with expertise in food & beverage and retail operations in airports and non-traditional settings. M2 Concepts is completely dedicated to delivering the highest level of customer service in the industry, and we have the awards to proudly show it. This is a company whose foundation is built on hospitality and relationships. The company is headquartered in Dallas/Ft. Worth area and have operations in Dallas (DFW), Houston George Bush (IAH), and San Antonio (SAT).
+                  </p>
+                  <a
+                    href="https://abdoulaa.github.io/m2-concepts/"
+                    target="_blank"
+                    class="project__description--link"
+                    ><i
+                      class="click fa-solid fa-link project__description--link--icon"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://github.com/AbdoulaA/m2-concepts"
+                    target="_blank"
+                    class="project__description--link"
+                    ><i
+                      class="click fa-brands fa-github project__description--link--icon"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/library project.png"
+                  alt=""
+                  class="project__wrapper--img"
+                />
+                <div class="project__description">
+                  <h1 class="project__description--title">
+                    Alexandria Library Website
+                  </h1>
+                  <h2 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h2>
+                  <p class="project__description--para">
+                    This is a mock website I built for the Library of
+                    Alexandria, the biggest library in Egypt. The concept is if
+                    anyone who does not speak Arabic wishes to learn about the
+                    library, they go to this website.
+                  </p>
+                  <a
+                    href="https://abdoulaa.github.io/elibrary/"
+                    target="_blank"
+                    class="project__description--link"
+                    ><i
+                      class="click fa-solid fa-link project__description--link--icon"
+                    ></i
+                  ></a>
+                  <a
+                    href="https://github.com/AbdoulaA/elibrary"
+                    target="_blank"
+                    class="project__description--link"
+                    ><i
+                      class="click fa-brands fa-github project__description--link--icon"
+                    ></i
+                  ></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section> -->
+    <section id="footer">
+      <div class="container">
+        <figure class="footer__logo--wrapper">
+          <div class="logos">
+            <a href="#" class="logo__anchor">
+              <p class="footer__top">^Top^</p>
+              <img
+                src="./assets/adv-portfolio logo.png"
+                alt=""
+                class="footer__logo--opacity personal-logo"
+              />
+            </a>
+            <img
+              src="./assets/adv-portfolio logo purple.png"
+              alt=""
+              class="footer__logo personal-logo__purple"
+            />
+          </div>
+        </figure>
+
+        <ul class="footer__links">
+          <li class="footer__link">
+            <a
+              href="https://github.com/AbdoulaA"
+              target="_blank"
+              class="footer__link--anchor"
+              >GitHub</a
+            >
+          </li>
+          <li class="footer__link">
+            <a
+              href="https://www.linkedin.com/in/abdorruhman-abdelwahed-472769250/"
+              target="_blank"
+              class="footer__link--anchor"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer__link">
+            <a href="#" onclick="toggleModalOn()" class="footer__link--anchor">Contact</a>
+          </li>
+          <li class="footer__link">
+            <a
+              href="./assets/Resume.pdf"
+              target="_blank"
+              class="footer__link--anchor"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
